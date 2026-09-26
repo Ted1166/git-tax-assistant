@@ -1,0 +1,352 @@
+:root {
+  --paper: #E7ECDD;
+  --surface: #F6F8F1;
+  --ink: #1B2A1F;
+  --ink-soft: #4E5C49;
+  --line: #C4CDB2;
+  --accent: #2F6B3D;
+  --accent-deep: #17331D;
+  --brass: #96742A;
+  --warn: #8B5E3C;
+  --serif: 'Source Serif 4', Georgia, serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.app-header {
+  background: var(--accent-deep);
+  color: var(--surface);
+  padding: 2.25rem 1.5rem 2rem;
+}
+
+.app-header-inner {
+  max-width: 68rem;
+  margin: 0 auto;
+}
+
+.app-kicker {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: #A9C3AA;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.app-title h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.app-disclaimer {
+  max-width: 42rem;
+  margin: 1rem 0 0;
+  font-size: 0.94rem;
+  line-height: 1.5;
+  color: #CDDBC8;
+}
+
+.app-main {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .app-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.intake-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.intake-section {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1.5rem 1.5rem 1.75rem;
+}
+
+.intake-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.25rem;
+}
+
+.intake-section-index {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 1px solid var(--accent);
+  color: var(--accent-deep);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.intake-section-header h2 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.intake-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field-label {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.field-hint {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+input[type='text'],
+input[type='number'],
+textarea {
+  border: 1px solid var(--line);
+  background: #FFFFFF;
+  border-radius: 3px;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+input[type='text']:focus,
+input[type='number']:focus,
+textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.inline-amount {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  max-width: 12rem;
+}
+
+.currency {
+  font-family: var(--mono);
+  color: var(--ink-soft);
+}
+
+.segmented {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.segment {
+  border: 1px solid var(--line);
+  background: #FFFFFF;
+  color: var(--ink);
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.segment:hover {
+  border-color: var(--accent);
+}
+
+.segment.active {
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
+  color: var(--surface);
+}
+
+input[type='range'] {
+  accent-color: var(--accent);
+}
+
+.results-panel {
+  position: sticky;
+  top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.results-total {
+  background: var(--accent-deep);
+  color: var(--surface);
+  border-radius: 4px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.results-total-label {
+  font-size: 0.85rem;
+  color: #B9CFB4;
+}
+
+.results-total-amount {
+  font-family: var(--mono);
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.results-total-note {
+  font-size: 0.78rem;
+  color: #A9C3AA;
+  margin-top: 0.4rem;
+  line-height: 1.4;
+}
+
+.results-group h4 {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  color: var(--ink-soft);
+}
+
+.results-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.results-group.muted .deduction-card {
+  opacity: 0.72;
+}
+
+.deduction-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--line);
+  border-radius: 3px;
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.deduction-card.eligible {
+  border-left-color: var(--accent);
+}
+
+.deduction-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.deduction-card-top h3 {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.deduction-amount {
+  font-family: var(--mono);
+  font-weight: 600;
+  color: var(--brass);
+  white-space: nowrap;
+}
+
+.deduction-status {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--warn);
+  white-space: nowrap;
+}
+
+.deduction-summary {
+  font-size: 0.88rem;
+  margin: 0;
+  color: var(--ink);
+}
+
+.deduction-reasoning {
+  font-size: 0.82rem;
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.deduction-citation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-top: 0.35rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--line);
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: var(--ink-soft);
+}
+
+.citation-pub {
+  font-weight: 600;
+  color: var(--accent-deep);
+}
+
+.retrieved-chunk {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 1rem 1.1rem;
+}
+
+.retrieved-chunk p {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.app-footer {
+  border-top: 1px solid var(--line);
+  padding: 1.5rem;
+}
+
+.app-footer p {
+  max-width: 68rem;
+  margin: 0 auto;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
