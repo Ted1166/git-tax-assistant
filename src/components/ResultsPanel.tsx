@@ -19,7 +19,7 @@ export function ResultsPanel({ results, total, retrieved }: Props) {
                     {total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
                 </span>
                 <span className="results-total-note">
-                    Educational estimate, not filed tax advice — consult a licensed preparer.
+                    Educational estimate, not filed tax advice - consult a licensed preparer.
                 </span>
             </div>
 

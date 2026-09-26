@@ -272,7 +272,7 @@ export function IntakeForm({ answers, onChange }: Props) {
             </Section>
 
             <Section index={5} title="Anything else">
-                <Field label="Describe your work situation in your own words" hint="Optional — used to surface related guidance below.">
+                <Field label="Describe your work situation in your own words" hint="Optional - used to surface related guidance below.">
                     <textarea
                         value={answers.freeText}
                         onChange={(e) => set('freeText', e.target.value)}

@@ -22,11 +22,11 @@ function App() {
       <header className="app-header">
         <div className="app-header-inner">
           <div className="app-title">
-            <span className="app-kicker">LexHack 2026 — Access to Justice &amp; Civic Tech</span>
+            <span className="app-kicker">LexHack 2026 - Access to Justice &amp; Civic Tech</span>
             <h1>Gig Worker Tax Assistant</h1>
           </div>
           <p className="app-disclaimer">
-            Educational estimate grounded in IRS Publications 463 and 535. Not filed tax advice —
+            Educational estimate grounded in IRS Publications 463 and 535. Not filed tax advice -
             consult a licensed preparer before filing.
           </p>
         </div>
