@@ -37,6 +37,16 @@
   margin-bottom: 0.6rem;
 }
 
+.app-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.app-title-row svg {
+  flex-shrink: 0;
+}
+
 .app-title h1 {
   font-family: var(--serif);
   font-weight: 600;
